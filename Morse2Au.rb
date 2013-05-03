@@ -1,6 +1,6 @@
 require './morse.rb'
 
-class Beep2
+class Morse2Au
 	@@sample_rate = 16000
 	@@wave = ''
 	@@io
