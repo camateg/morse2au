@@ -50,6 +50,7 @@ class Morse2Au
 	end
 
 	def strToMorse(text)
+		text.downcase!
 		text.split('').each do |c|
 			if /^[a-z0-9]$/.match(c)
 				$morse_chars[c].each do |c2|

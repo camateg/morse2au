@@ -1,7 +1,7 @@
 require './Au.rb'
 require './Morse2Au.rb'
 
-	qso_text = 'cq cq de kb3tix'
+	qso_text = 'CQ CQ CQ de KB3TIX'
 
 	beep = Morse2Au.new('/home/matt/kb3tix.au', 0.8)
 	
