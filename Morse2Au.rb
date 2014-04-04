@@ -69,6 +69,7 @@ class Morse2Au
 
 	def writeOut
 		@@au.data = @@wave
+		@@au.ds = @@wave.bytelength
 		@@au.write(@@io)
 	end 
 end
