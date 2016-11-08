@@ -4,7 +4,7 @@ require 'au/Au.rb'
 # Generate an .au file of Morse code
 #
 # Initialize:
-#   >> MorseAu.init("/home/matt/output.au", 0.5)
+#   >> MorseAu.initialize("/home/matt/output.au", 0.5)
 #
 # Arguments:
 #   file: (String)
