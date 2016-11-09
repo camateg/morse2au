@@ -4,20 +4,20 @@ require 'au/Au.rb'
 # Generate an .au file of Morse code
 #
 # Initialize:
-#   >> Morse2Au.initialize("/home/matt/output.au", 0.5)
+#   >> m = Morse2Au.new("/home/matt/output.au", 0.5)
 #
 # Arguments:
 #   file: (String)
 #   rate: (Float)
 #
 # Convert a string:
-#    >> Morse2Au.strToMorse("CQ CQ")
+#    >> m.strToMorse("CQ CQ")
 #
 # Arguments:
 #   text: (String)
 #
 # Write Out:
-#    >> Morse2Au.writeOut
+#    >> m.writeOut
 #
 
 class Morse2Au
