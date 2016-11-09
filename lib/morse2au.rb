@@ -54,7 +54,7 @@ class Morse2Au
 	#
 	# Arguments:
 	#
-	# duration: (Integer)
+	#   duration: (Integer)
 	#
 	def self.addSilence(duration)
 		0.step(duration, 1.0/@@sample_rate) do |i|
