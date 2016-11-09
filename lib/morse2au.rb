@@ -34,7 +34,7 @@ class Morse2Au
 	#  ofile: (String)
 	#  rel_speed: (Float)
 	#
-	def self.initialize(ofile, rel_speed)
+	def initialize(ofile, rel_speed)
 		@@io = File.open(ofile, "w")
 		@@rel_speed = rel_speed
 	end
@@ -44,7 +44,7 @@ class Morse2Au
 	# 
 	#  duration: (Float)
 	#
-	def self.addBeep(duration)
+	def addBeep(duration)
 		0.step(duration, 1.0/@@sample_rate) do |t|
 			x = Math.sin(t * @@freq) * 50 + 127
 			@@wave << x.to_i.chr
@@ -56,7 +56,7 @@ class Morse2Au
 	#
 	#  duration: (Float)
 	#
-	def self.addSilence(duration)
+	def addSilence(duration)
 		0.step(duration, 1.0/@@sample_rate) do |i|
 			@@wave << 0
 		end
@@ -65,7 +65,7 @@ class Morse2Au
 	#
 	# Add a "."
 	#
-	def self.addDit
+	def addDit
 		self.addBeep(@@rel_speed)
 		self.addSilence(@@rel_speed)
 	end
@@ -73,7 +73,7 @@ class Morse2Au
 	#
 	# Add a "-"
 	#
-	def self.addDah
+	def addDah
 		self.addBeep(@@rel_speed * 4)
 		self.addSilence(@@rel_speed)
 	end
@@ -81,14 +81,14 @@ class Morse2Au
 	#	
 	# Add a letter / short trailing space
 	#
-	def self.addLSpace
+	def addLSpace
 		self.addSilence(@@rel_speed * 3)
 	end
 
 	#
 	# Add a word / long trailing space
 	#
-	def self.addWSpace
+	def addWSpace
 		self.addSilence(@@rel_speed * 7)
 	end
 
@@ -98,7 +98,7 @@ class Morse2Au
 	# Arguments:
 	#  text: (String)
 	#
-	def self.strToMorse(text)
+	def strToMorse(text)
 		text.downcase!
 		text.split('').each do |c|
 			if /^[a-z0-9]$/.match(c)
@@ -119,7 +119,7 @@ class Morse2Au
 	#
 	# Write out using pre-determined file name
 	#
-	def self.writeOut
+	def writeOut
 		# No idea about next line
 		@@au.data = @@wave #@@wave.slice(0..@@wave.length/2)
 		@@au.ds = @@wave.bytesize
