@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name = 'morse2au'
-	s.version = '0.0.6'
+	s.version = '0.0.7'
 	s.date = '2016-11-08'
 	s.summary = 'Morse2Au'
 	s.description = 'Generate a morse code .au file from a string'
