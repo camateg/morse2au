@@ -96,7 +96,7 @@ class Morse2Au
 	# Convert a string to morse code
 	#
 	# Arguments:
-	#   text: (String)
+	#  text: (String)
 	#
 	def self.strToMorse(text)
 		text.downcase!
