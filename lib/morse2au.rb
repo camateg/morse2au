@@ -63,7 +63,7 @@ class Morse2Au
 	end
 
 	#
-	# Add a .
+	# Add a "."
 	#
 	def self.addDit
 		self.addBeep(@@rel_speed)
@@ -71,7 +71,7 @@ class Morse2Au
 	end
 
 	#
-	# Add a -
+	# Add a "-"
 	#
 	def self.addDah
 		self.addBeep(@@rel_speed * 4)
