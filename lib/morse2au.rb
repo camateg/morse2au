@@ -35,8 +35,8 @@ class Morse2Au
 	#  rel_speed: (Float)
 	#
 	def initialize(ofile, rel_speed)
-		@@@@io = File.open(ofile, "w")
-		@@@@rel_speed = rel_speed
+		@@io = File.open(ofile, "w")
+		@@rel_speed = rel_speed
 	end
 
 	#
