@@ -42,7 +42,7 @@ class Morse2Au
 	#
 	# Arguments:
 	# 
-	#  duration: (Integer)
+	#  duration: (Float)
 	#
 	def self.addBeep(duration)
 		0.step(duration, 1.0/@@sample_rate) do |t|
@@ -54,7 +54,7 @@ class Morse2Au
 	#
 	# Arguments:
 	#
-	#  duration: (Integer)
+	#  duration: (Float)
 	#
 	def self.addSilence(duration)
 		0.step(duration, 1.0/@@sample_rate) do |i|
